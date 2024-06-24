@@ -1,15 +1,22 @@
 #root {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: 100px 1fr 50px;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 100px 1fr 50px;
 }
 
 header {
-  padding: 20px;
+    padding: 20px;
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
