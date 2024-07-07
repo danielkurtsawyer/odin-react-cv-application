@@ -14,8 +14,7 @@ function App() {
                 <h1>CV Application Builder</h1>
             </header>
             <main>
-                <button onClick={handleIsEditing}>Change Mode</button>
-                {isEditing ? <ResumeForm /> : <ResumeView />}
+                {isEditing ? <ResumeForm submitHandler={handleIsEditing}/> : <ResumeView editHandler={handleIsEditing}/>}
             </main>
             <footer>
                 <a
