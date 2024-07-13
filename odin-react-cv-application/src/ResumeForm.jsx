@@ -1,4 +1,6 @@
-function ResumeForm({submitHandler}) {
+import PropTypes from 'prop-types';
+
+function ResumeForm({submitHandler, values}) {
     // this will be a form with the onSubmit handler function being the prop function
     return (
     <>
@@ -7,7 +9,7 @@ function ResumeForm({submitHandler}) {
                 <legend>General Information</legend>
 
                 <label htmlFor="first_name">First Name</label>
-                <input type="text" name="first_name" id="first_name" />
+                <input type="text" name="first_name" id="first_name" defaultValue={values.firstName}/>
                 
                 <label htmlFor="last_name">Last Name</label>
                 <input type="text" name="last_name" id="last_name" />
@@ -55,6 +57,10 @@ function ResumeForm({submitHandler}) {
         </form>
         
     </>);
+}
+
+ResumeForm.propTypes = {
+    submitHandler: PropTypes.func
 }
 
 export default ResumeForm;

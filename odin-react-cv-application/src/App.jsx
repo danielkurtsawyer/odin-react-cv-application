@@ -5,16 +5,29 @@ import ResumeView from './ResumeView';
 
 function App() {
     const [isEditing, setIsEditing] = useState(true);
-    const handleIsEditing = () => {
+    const [inputValues, setInputValues] = useState({});
+    
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        let inputValueObject = {};
+        // extract first name
+        inputValueObject.firstName = event.target['first_name'].value;
+        setInputValues(inputValueObject);
         setIsEditing(!isEditing);
     };
+
+    const handleEdit = (event) => {
+        event.preventDefault();
+        setIsEditing(!isEditing);
+    }
+
     return (
         <>
             <header>
                 <h1>CV Application Builder</h1>
             </header>
             <main>
-                {isEditing ? <ResumeForm submitHandler={handleIsEditing}/> : <ResumeView editHandler={handleIsEditing}/>}
+                {isEditing ? <ResumeForm submitHandler={handleSubmit} values={inputValues}/> : <ResumeView editHandler={handleEdit} values={inputValues}/>}
             </main>
             <footer>
                 <a
