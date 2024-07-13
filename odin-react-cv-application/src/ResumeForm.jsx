@@ -60,7 +60,8 @@ function ResumeForm({submitHandler, values}) {
 }
 
 ResumeForm.propTypes = {
-    submitHandler: PropTypes.func
+    submitHandler: PropTypes.func,
+    values: PropTypes.object
 }
 
 export default ResumeForm;

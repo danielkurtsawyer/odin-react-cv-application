@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function ResumeView({editHandler, values}) {
     // include a button maybe in the top right to switch to the edit mode
     return (
@@ -7,6 +9,11 @@ function ResumeView({editHandler, values}) {
             <button onClick={editHandler}>Edit Form</button>
         </>
     );
+}
+
+ResumeView.propTypes = {
+    editHandler: PropTypes.func,
+    values: PropTypes.object
 }
 
 export default ResumeView;
