@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import './ResumeForm.css'
 
 function ResumeForm({submitHandler, values}) {
     // this will be a form with the onSubmit handler function being the prop function
@@ -8,50 +9,48 @@ function ResumeForm({submitHandler, values}) {
             <fieldset className="info">
                 <legend>General Information</legend>
 
-                <label htmlFor="first_name">First Name</label>
-                <input type="text" name="first_name" id="first_name" defaultValue={values.firstName}/>
-                
-                <label htmlFor="last_name">Last Name</label>
-                <input type="text" name="last_name" id="last_name" defaultValue={values.lastName}/>
-
-                <label htmlFor="email">Email</label>
-                <input type="email" name="email" id="email" defaultValue={values.email}/>
-
-                <label htmlFor="phone_number">Phone Number</label>
-                <input type="tel" name="phone_number" id="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" defaultValue={values.phoneNumber}/>
+                <div className="input-wrapper">
+                    <label htmlFor="first_name">First Name</label>
+                    <input type="text" name="first_name" id="first_name" defaultValue={values.firstName}/>
+                    
+                    <label htmlFor="last_name">Last Name</label>
+                    <input type="text" name="last_name" id="last_name" defaultValue={values.lastName}/>
+                    <label htmlFor="email">Email</label>
+                    <input type="email" name="email" id="email" defaultValue={values.email}/>
+                    <label htmlFor="phone_number">Phone Number</label>
+                    <input type="tel" name="phone_number" id="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" defaultValue={values.phoneNumber}/>
+                </div>
             </fieldset>
 
             <fieldset className="education">
                 <legend>Educational Experience</legend>
 
-                <label htmlFor="school_name">School Name</label>
-                <input type="text" name="school_name" id="school_name" defaultValue={values.schoolName}/>
-
-                <label htmlFor="title_study">Title of Study</label>
-                <input type="text" name="title_study" id="title_study" defaultValue={values.titleStudy}/>
-
-                <label htmlFor="date_study">Date of Study</label>
-                <input type="date" name="date_study" id="date_study" defaultValue={values.dateStudy}/>
+                <div className="input-wrapper">
+                    <label htmlFor="school_name">School Name</label>
+                    <input type="text" name="school_name" id="school_name" defaultValue={values.schoolName}/>
+                    <label htmlFor="title_study">Title of Study</label>
+                    <input type="text" name="title_study" id="title_study" defaultValue={values.titleStudy}/>
+                    <label htmlFor="date_study">Date of Study</label>
+                    <input type="date" name="date_study" id="date_study" defaultValue={values.dateStudy}/>
+                </div>
 
             </fieldset>
             
             <fieldset className="practical">
                 <legend>Practical Experience</legend>
 
-                <label htmlFor="company_name">Company Name</label>
-                <input type="text" name="company_name" id="company_name" defaultValue={values.companyName}/>
-
-                <label htmlFor="position_title">Position Title</label>
-                <input type="text" name="position_title" id="position_title" defaultValue={values.positionTitle}/>
-
-                <label htmlFor="job_responsibilities">Main Responsibilities of Job</label>
-                <textarea name="job_responsibilities" id="job_responsibilities" defaultValue={values.jobResponsibilities}></textarea>
-
-                <label htmlFor="job_start_date">Start Date</label>
-                <input type="date" name="job_start_date" id="job_start_date" defaultValue={values.jobStartDate}/>
-
-                <label htmlFor="job_end_date">End Date</label>
-                <input type="date" name="job_end_date" id="job_end_date" defaultValue={values.jobEndDate}/>
+                <div className="input-wrapper">
+                    <label htmlFor="company_name">Company Name</label>
+                    <input type="text" name="company_name" id="company_name" defaultValue={values.companyName}/>
+                    <label htmlFor="position_title">Position Title</label>
+                    <input type="text" name="position_title" id="position_title" defaultValue={values.positionTitle}/>
+                    <label htmlFor="job_responsibilities">Main Responsibilities of Job</label>
+                    <textarea name="job_responsibilities" id="job_responsibilities" defaultValue={values.jobResponsibilities}></textarea>
+                    <label htmlFor="job_start_date">Start Date</label>
+                    <input type="date" name="job_start_date" id="job_start_date" defaultValue={values.jobStartDate}/>
+                    <label htmlFor="job_end_date">End Date</label>
+                    <input type="date" name="job_end_date" id="job_end_date" defaultValue={values.jobEndDate}/>
+                </div>
             </fieldset>
             <button type="submit">Submit</button>
         </form>
@@ -59,6 +58,7 @@ function ResumeForm({submitHandler, values}) {
     </>);
 }
 
+// prop validation
 ResumeForm.propTypes = {
     submitHandler: PropTypes.func,
     values: PropTypes.object
