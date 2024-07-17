@@ -1,0 +1,16 @@
+.view {
+    min-width: 375px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.email-phone, .school-date, .company-date {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.responsibilities {
+    margin: 10px;
+}

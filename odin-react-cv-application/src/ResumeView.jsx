@@ -1,25 +1,42 @@
 import PropTypes from 'prop-types';
+import './ResumeView.css'
 
 function ResumeView({editHandler, values}) {
     // include a button maybe in the top right to switch to the edit mode
     return (
         <>
-            <div>First name: {values.firstName}</div>
-            <div>Last name: {values.lastName}</div>
-            <div>Email: {values.email}</div>
-            <div>Phone Number: {values.phoneNumber}</div>
+            <div className="view">
+                <section>
+                    <h1 className='full-name'>{values.firstName} {values.lastName}</h1>
+                    <div className="email-phone">
+                        <div>{values.email}</div>
+                        <div>{values.phoneNumber}</div>
+                    </div>
+                </section>
+                <section>
+                    <h1>Educational Experience</h1>
+                    <div className="school-date">
+                        <div>{values.schoolName}</div>
+                        <div>{values.dateStudy}</div>
+                    </div>
+                    <div>{values.titleStudy}</div>
+                    
+                </section>
+                <section>
+                    <h1>Professional Experience</h1>
+                    <div className="company-date">
+                        <div>{values.companyName}</div>
+                        <div>{values.jobStartDate} to {values.jobEndDate}</div>
+                    </div>
+                    <div>{values.positionTitle}</div>
 
-            <div>School Name: {values.schoolName}</div>
-            <div>Title of Study: {values.titleStudy}</div>
-            <div>Date of Study: {values.dateStudy}</div>
-
-            <div>Company Name: {values.companyName}</div>
-            <div>Position Title: {values.positionTitle}</div>
-            <div>Job Responsibilities: {values.jobResponsibilities}</div>
-            <div>Job Start Date: {values.jobStartDate}</div>
-            <div>Job End Date: {values.jobEndDate}</div>
-
-            <button onClick={editHandler}>Edit Form</button>
+                    <div>Responsibilities:</div>
+                    <div className='responsibilities'>{values.jobResponsibilities}</div>
+                    
+                    
+                </section>
+                <button onClick={editHandler}>Edit Form</button>
+            </div>
         </>
     );
 }
