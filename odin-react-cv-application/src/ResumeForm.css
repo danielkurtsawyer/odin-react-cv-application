@@ -1,6 +1,10 @@
 form {
+    min-width: 320px;
+    width: 70vw;
+
     padding: 25px;
     border: 1px solid black;
+    border-radius: 5px;
 
     display: flex;
     flex-direction: column;
@@ -33,7 +37,7 @@ label[for='job_responsibilities']{
 }
 
 .education .input-wrapper {
-    grid-template-columns: repeat(3, 1fr 2fr);
+    grid-template-columns: repeat(2, 1fr 2fr);  
 }
 
 .practical .input-wrapper {
@@ -45,9 +49,20 @@ label[for='job_responsibilities']{
     grid-column: 1/5;
 }
 
-@media (max-width: 900px){
-    .education .input-wrapper{
-        grid-template-columns: repeat(2, 1fr 2fr);
+input:invalid, textarea:invalid{
+    border-color: red;
+    background-color: rgb(255, 227, 227);
+}
+
+input:valid, textarea:valid{
+    border-color: green;
+    background-color: rgb(167, 237, 167);
+}
+
+@media (max-width: 1000px){
+    .input-wrapper {
+        display: flex;
+        flex-direction: column;
     }
 }
 

@@ -11,14 +11,14 @@ function ResumeForm({submitHandler, values}) {
 
                 <div className="input-wrapper">
                     <label htmlFor="first_name">First Name</label>
-                    <input type="text" name="first_name" id="first_name" defaultValue={values.firstName}/>
+                    <input type="text" name="first_name" id="first_name" defaultValue={values.firstName} required/>
                     
                     <label htmlFor="last_name">Last Name</label>
-                    <input type="text" name="last_name" id="last_name" defaultValue={values.lastName}/>
+                    <input type="text" name="last_name" id="last_name" defaultValue={values.lastName} required/>
                     <label htmlFor="email">Email</label>
-                    <input type="email" name="email" id="email" defaultValue={values.email}/>
+                    <input type="email" name="email" id="email" defaultValue={values.email} required/>
                     <label htmlFor="phone_number">Phone Number</label>
-                    <input type="tel" name="phone_number" id="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" defaultValue={values.phoneNumber}/>
+                    <input type="tel" name="phone_number" id="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" defaultValue={values.phoneNumber} placeholder='123-456-7890' required/>
                 </div>
             </fieldset>
 
@@ -27,11 +27,11 @@ function ResumeForm({submitHandler, values}) {
 
                 <div className="input-wrapper">
                     <label htmlFor="school_name">School Name</label>
-                    <input type="text" name="school_name" id="school_name" defaultValue={values.schoolName}/>
+                    <input type="text" name="school_name" id="school_name" defaultValue={values.schoolName} required/>
                     <label htmlFor="title_study">Title of Study</label>
-                    <input type="text" name="title_study" id="title_study" defaultValue={values.titleStudy}/>
+                    <input type="text" name="title_study" id="title_study" defaultValue={values.titleStudy} required/>
                     <label htmlFor="date_study">Date of Study</label>
-                    <input type="date" name="date_study" id="date_study" defaultValue={values.dateStudy}/>
+                    <input type="date" name="date_study" id="date_study" defaultValue={values.dateStudy} required/>
                 </div>
 
             </fieldset>
@@ -41,15 +41,15 @@ function ResumeForm({submitHandler, values}) {
 
                 <div className="input-wrapper">
                     <label htmlFor="company_name">Company Name</label>
-                    <input type="text" name="company_name" id="company_name" defaultValue={values.companyName}/>
+                    <input type="text" name="company_name" id="company_name" defaultValue={values.companyName} required/>
                     <label htmlFor="position_title">Position Title</label>
-                    <input type="text" name="position_title" id="position_title" defaultValue={values.positionTitle}/>
+                    <input type="text" name="position_title" id="position_title" defaultValue={values.positionTitle} required/>
                     <label htmlFor="job_responsibilities">Main Responsibilities of Job</label>
-                    <textarea name="job_responsibilities" id="job_responsibilities" defaultValue={values.jobResponsibilities}></textarea>
+                    <textarea name="job_responsibilities" id="job_responsibilities" defaultValue={values.jobResponsibilities} required></textarea>
                     <label htmlFor="job_start_date">Start Date</label>
-                    <input type="date" name="job_start_date" id="job_start_date" defaultValue={values.jobStartDate}/>
+                    <input type="date" name="job_start_date" id="job_start_date" defaultValue={values.jobStartDate} required/>
                     <label htmlFor="job_end_date">End Date</label>
-                    <input type="date" name="job_end_date" id="job_end_date" defaultValue={values.jobEndDate}/>
+                    <input type="date" name="job_end_date" id="job_end_date" defaultValue={values.jobEndDate} required/>
                 </div>
             </fieldset>
             <button type="submit">Submit</button>
