@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import ResumeForm from './ResumeForm';
-import ResumeView from './ResumeView';
+import ResumeForm from './components/ResumeForm';
+import ResumeView from './components/ResumeView';
 
 function App() {
     const [isEditing, setIsEditing] = useState(true);
@@ -36,7 +36,7 @@ function App() {
         inputValueObject.jobStartDate = event.target['job_start_date'].value;
         // extract job end date
         inputValueObject.jobEndDate = event.target['job_end_date'].value;
-        
+
         setInputValues(inputValueObject);
         setIsEditing(!isEditing);
     };

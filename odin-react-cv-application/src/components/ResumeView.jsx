@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import './ResumeView.css'
+import '../styles/ResumeView.css'
 
 function ResumeView({editHandler, values}) {
     // include a button maybe in the top right to switch to the edit mode

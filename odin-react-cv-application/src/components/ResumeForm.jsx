@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import './ResumeForm.css'
+import '../styles/ResumeForm.css'
 
 function ResumeForm({submitHandler, values}) {
     // this will be a form with the onSubmit handler function being the prop function
