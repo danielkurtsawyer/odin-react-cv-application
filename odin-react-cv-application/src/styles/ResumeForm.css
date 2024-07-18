@@ -1,18 +1,21 @@
 form {
     min-width: 320px;
     width: 70vw;
+    height: max(100%, 1152px);
 
     padding: 25px;
     border: 1px solid black;
     border-radius: 5px;
 
     display: flex;
+    gap: 20px;
     flex-direction: column;
-    gap: 25px;
+    justify-content: space-around;
 }
 
 fieldset{
     border: none;
+    height: 100%;
 }
 
 legend {
@@ -25,6 +28,7 @@ legend {
     display: grid;
     column-gap: 10px;
     row-gap: 10px;
+    height: 100%;
 }
 
 label[for='job_responsibilities']{
@@ -45,6 +49,11 @@ label[for='job_responsibilities']{
     grid-template-rows: 1fr 1fr 3fr 1fr;
 }
 
+#title_study {
+    grid-column: 4/5;
+    grid-row: 1/3;
+}
+
 #job_responsibilities {
     grid-column: 1/5;
 }
@@ -59,7 +68,21 @@ input:valid, textarea:valid{
     background-color: rgb(167, 237, 167);
 }
 
-@media (max-width: 1000px){
+input {
+    min-height: 24px;
+    height: min(100%, 30px);
+}
+
+input, textarea {
+    border-radius: 5px;
+    padding: 2px;
+}
+
+button {
+    min-height: 35px;
+}
+
+@media (max-width: 1025px){
     .input-wrapper {
         display: flex;
         flex-direction: column;

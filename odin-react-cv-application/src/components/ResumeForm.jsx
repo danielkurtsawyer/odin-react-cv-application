@@ -29,7 +29,7 @@ function ResumeForm({submitHandler, values}) {
                     <label htmlFor="school_name">School Name</label>
                     <input type="text" name="school_name" id="school_name" defaultValue={values.schoolName} required/>
                     <label htmlFor="title_study">Title of Study</label>
-                    <input type="text" name="title_study" id="title_study" defaultValue={values.titleStudy} required/>
+                    <textarea name="title_study" id="title_study" defaultValue={values.titleStudy} required></textarea>
                     <label htmlFor="date_study">Date of Study</label>
                     <input type="date" name="date_study" id="date_study" defaultValue={values.dateStudy} required/>
                 </div>
