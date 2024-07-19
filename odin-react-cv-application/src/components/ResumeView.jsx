@@ -29,7 +29,7 @@ function ResumeView({editHandler, values}) {
                     <h1>Professional Experience</h1>
                     <div className="company-date">
                         <div className='company'>{values.companyName}</div>
-                        <div>{formatDateString(values.jobStartDate)} - {formatDateString(values.jobEndDate)}</div>
+                        <div className='date'>{formatDateString(values.jobStartDate)} - {formatDateString(values.jobEndDate)}</div>
                     </div>
                     <div className='title'>{values.positionTitle}</div>
 

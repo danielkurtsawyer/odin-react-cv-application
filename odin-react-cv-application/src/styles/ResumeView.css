@@ -37,3 +37,7 @@ section {
 .full-name {
     font-size: 30px;
 }
+
+.date {
+    text-align: end;
+}
