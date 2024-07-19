@@ -1,8 +1,13 @@
 .view {
     min-width: 375px;
+    width: min(80%, 600px);
     display: flex;
     flex-direction: column;
     gap: 15px;
+    background-color: var(--background-color-secondary);
+    padding: 25px;
+    border-radius: 5px;
+    border: 1px solid black;
 }
 
 .email-phone, .school-date, .company-date {
@@ -12,5 +17,19 @@
 }
 
 .responsibilities {
-    margin: 10px;
+    margin-left: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.school, .company {
+    font-weight: bold;
+}
+
+.title {
+    font-style: italic;
 }

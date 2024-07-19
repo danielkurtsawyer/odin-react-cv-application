@@ -2,7 +2,10 @@ import PropTypes from 'prop-types';
 import '../styles/ResumeView.css'
 
 function ResumeView({editHandler, values}) {
-    // include a button maybe in the top right to switch to the edit mode
+    const formatDateString = (string) => {
+        return string.substring(5, 7) + '/' + string.substring(8) + '/' + string.substring(0, 4);
+    };
+
     return (
         <>
             <div className="view">
@@ -16,22 +19,24 @@ function ResumeView({editHandler, values}) {
                 <section>
                     <h1>Educational Experience</h1>
                     <div className="school-date">
-                        <div>{values.schoolName}</div>
-                        <div>{values.dateStudy}</div>
+                        <div className='school'>{values.schoolName}</div>
+                        <div>{formatDateString(values.dateStudy)}</div>
                     </div>
-                    <div>{values.titleStudy}</div>
+                    <div className='title'>{values.titleStudy}</div>
                     
                 </section>
                 <section>
                     <h1>Professional Experience</h1>
                     <div className="company-date">
-                        <div>{values.companyName}</div>
-                        <div>{values.jobStartDate} to {values.jobEndDate}</div>
+                        <div className='company'>{values.companyName}</div>
+                        <div>{formatDateString(values.jobStartDate)} - {formatDateString(values.jobEndDate)}</div>
                     </div>
-                    <div>{values.positionTitle}</div>
+                    <div className='title'>{values.positionTitle}</div>
 
                     <div>Responsibilities:</div>
-                    <div className='responsibilities'>{values.jobResponsibilities}</div>
+                    <ul className='responsibilities'>
+                        {values.jobResponsibilities.split('\n').map((responsibility, index) => <li key={index}>{responsibility}</li>)}
+                    </ul>
                     
                     
                 </section>
