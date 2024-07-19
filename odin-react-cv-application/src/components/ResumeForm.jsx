@@ -18,7 +18,7 @@ function ResumeForm({submitHandler, values}) {
                     <label htmlFor="email">Email</label>
                     <input type="email" name="email" id="email" defaultValue={values.email} required/>
                     <label htmlFor="phone_number">Phone Number</label>
-                    <input type="tel" name="phone_number" id="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" defaultValue={values.phoneNumber} placeholder='123-456-7890' required/>
+                    <input type="text" name="phone_number" id="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" defaultValue={values.phoneNumber} placeholder='123-456-7890' required/>
                 </div>
             </fieldset>
 
