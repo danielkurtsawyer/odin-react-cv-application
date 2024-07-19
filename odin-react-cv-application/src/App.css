@@ -1,17 +1,26 @@
 #root {
+    --background-color-primary: #345995;
+    --background-color-secondary: #E6E6E6;
+    --header-text-color: #E6E6E6;
+    --regular-text-color: #444444;
+    --accent-color: #00B5B5;
+    --focus-color: #FFD166;
     min-height: 100vh;
     display: grid;
     grid-template-rows: clamp(50px, 1fr, 100px) 1fr 50px;
+    background-color: var(--background-color-primary);
 }
 
 header {
     padding: 20px;
+    color: var(--header-text-color);
 }
 
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--focus-color);
 }
 
 main {
