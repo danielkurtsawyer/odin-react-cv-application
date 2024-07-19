@@ -20,8 +20,18 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--focus-color);
 }
+
+a, a:visited, a:link {
+    color: var(--focus-color);
+    text-decoration: none;
+    transition: transform 250ms ease-in-out;
+}
+
+a:hover {
+    transform: scale(1.10);
+}
+
 
 main {
     display: flex;
