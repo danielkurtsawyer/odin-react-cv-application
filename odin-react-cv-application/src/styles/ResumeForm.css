@@ -71,8 +71,7 @@ input:valid, textarea:valid{
     background-color: rgb(167, 237, 167);
 }
 
-input {
-    
+input, textarea {
     min-height: 26px;
 }
 
@@ -80,11 +79,12 @@ input, textarea {
     border-radius: 5px;
     padding: 2px;
     border: 1px solid var(--background-color-primary);
+    font-size: 16px;
 }
 
 textarea {
     resize: vertical;
-    min-height: 26px;
+    
     max-height: 200px;
     align-self: first baseline;
     height: 100%;
@@ -103,7 +103,7 @@ button:hover {
 
 
 
-@media (max-width: 1025px){
+@media (max-width: 1100px){
     .input-wrapper {
         display: flex;
         flex-direction: column;
