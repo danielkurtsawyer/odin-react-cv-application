@@ -33,3 +33,7 @@ section {
 .title {
     font-style: italic;
 }
+
+.full-name {
+    font-size: 30px;
+}
